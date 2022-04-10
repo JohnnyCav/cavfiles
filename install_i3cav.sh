@@ -34,12 +34,9 @@ rm -rf ~/.config/volumeicon
 cp -r ~/cavfiles/volumeicon ~/.config/
 
 # themes, icons and fonts
-mkdir ~/.themes
-mkdir ~/.icons
-
-cp -r fonts ~/.local/share/
-cp -r ~/cavfiles/icons/* ~/.icons
-cp -r ~/cavfiles/themes/* ~/.themes
+cp -r ~/cavfiles/fonts ~/.local/share/
+cp -r ~/cavfiles/icons ~/.local/share/
+cp -r ~/cavfiles/themes ~/.local/share/
 
 # move wallpapers
 mkdir ~/Pictures
