@@ -9,12 +9,25 @@ sudo dnf install i3-gaps --allowerasing -y
 sudo dnf install zsh i3status i3lock rofi alacritty picom nitrogen polkit-gnome lxappearance nautilus dunst volumeicon network-manager-applet arandr blueman pavucontrol xbacklight ImageMagick -y
 
 # move config files around
+rm -rf .config/alacritty
 mv alacritty ~/.config/
+
+rm -rf .config/dunst
 mv dunst ~/.config/
+
+rm -rf .config/i3
 mv i3 ~/.config/
+
+rm -rf .config/i3status
 mv i3status ~/.config/
+
+rm -rf .config/nitrogen
 mv nitrogen ~/.config/
+
+rm -rf .config/rofi
 mv rofi ~/.config/
+
+rm -rf .config/volumeicon
 mv volumeicon ~/.config/
 
 # themes, icons and fonts
