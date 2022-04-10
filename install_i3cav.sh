@@ -5,11 +5,11 @@ echo "Starting i3cav installer..."
 # install i3-gaps instead of i3
 sudo dnf install i3-gaps --allowerasing -y
 
+# install i3-extended
+sudo dnf install @i3-extended -y
+
 # install other dependencies
 sudo dnf install zsh i3status i3lock rofi alacritty picom nitrogen polkit-gnome lxappearance thunar dunst volumeicon network-manager-applet arandr blueman pavucontrol xbacklight ImageMagick flameshot neofetch -y
-
-# install papirus icons
-sudo dnf install papirus-icon-theme -y
 
 # copy config files around
 rm -rf ~/.config/alacritty
@@ -34,7 +34,7 @@ rm -rf ~/.config/volumeicon
 cp -r ~/cavfiles/volumeicon ~/.config/
 
 # themes, icons and fonts
-mkdir ~/.themes 
+mkdir ~/.themes
 mkdir ~/.icons
 
 cp -r fonts ~/.local/share/
