@@ -73,8 +73,8 @@ bindsym $mod+Shift+8 move container to workspace $workspace8
 bindsym $mod+Shift+9 move container to workspace $workspace9
 
 # assign apps to workspaces
-assign [class="Brave-browser"] $workspace1
-assign [class="jetbrains-idea"] $workspace2
+# assign [class="Brave-browser"] $workspace1
+# assign [class="jetbrains-idea"] $workspace2
 assign [class="Microsoft Teams - Preview"] $workspace7
 assign [class="Skype"] $workspace7
 assign [class="spotify"] $workspace9
@@ -263,7 +263,7 @@ exec_always --no-startup-id "setxkbmap -model pc104 -layout pt,us -option grp:al
 
 bindsym $mod+Return exec --no-startup-id alacritty;focus
 bindsym control+mod1+u exec --no-startup-id pavucontrol
-bindsym $mod+Shift+Return exec --no-startup-id nautilus;focus
+bindsym $mod+Shift+Return exec --no-startup-id thunar;focus
 bindsym $mod+Shift+b exec --no-startup-id brave-browser;focus
 
 #####################################################################################################################
