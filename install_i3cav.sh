@@ -8,41 +8,41 @@ sudo dnf install i3-gaps --allowerasing -y
 # install other dependencies
 sudo dnf install zsh i3status i3lock rofi alacritty picom nitrogen polkit-gnome lxappearance nautilus dunst volumeicon network-manager-applet arandr blueman pavucontrol xbacklight ImageMagick -y
 
-# move config files around
+# install papirus icons
+sudo dnf install papirus-icon-theme -y
+
+# copy config files around
 rm -rf ~/.config/alacritty
-mv -i ~/cavfiles/alacritty ~/.config/
+cp -r ~/cavfiles/alacritty ~/.config/
 
 rm -rf ~/.config/dunst
-mv -i ~/cavfiles/dunst ~/.config/
+cp -r ~/cavfiles/dunst ~/.config/
 
 rm -rf ~/.config/i3
-mv -i ~/cavfiles/i3 ~/.config/
+cp -r ~/cavfiles/i3 ~/.config/
 
 rm -rf ~/.config/i3status
-mv -i ~/cavfiles/i3status ~/.config/
+cp -r ~/cavfiles/i3status ~/.config/
 
 rm -rf ~/.config/nitrogen
-mv -i ~/cavfiles/nitrogen ~/.config/
+cp -r ~/cavfiles/nitrogen ~/.config/
 
 rm -rf ~/.config/rofi
-mv -i ~/cavfiles/rofi ~/.config/
+cp -r ~/cavfiles/rofi ~/.config/
 
 rm -rf ~/.config/volumeicon
-mv -i ~/cavfiles/volumeicon ~/.config/
+cp -r ~/cavfiles/volumeicon ~/.config/
 
 # themes, icons and fonts
 mkdir ~/.themes 
 mkdir ~/.icons
 
-mv fonts ~/.local/share/
-mv -i ~/cavfiles/icons/* ~/.icons
-mv -i ~/cavfiles/themes/* ~/.themes
-
-# install papirus icons
-sudo dnf install papirus-icon-theme -y
+cp -r fonts ~/.local/share/
+cp -r ~/cavfiles/icons/* ~/.icons
+cp -r ~/cavfiles/themes/* ~/.themes
 
 # move wallpapers
 mkdir ~/Pictures
-mv -i ~/cavfiles/wallpapers/* ~/Pictures/
+cp -r ~/cavfiles/wallpapers/* ~/Pictures/
 
 echo "i3cav finish installing!"
