@@ -6,7 +6,7 @@ echo "Starting i3cav installer..."
 sudo dnf install i3-gaps --allowerasing -y
 
 # install other dependencies
-sudo dnf install zsh i3status i3lock rofi alacritty picom nitrogen polkit-gnome lxappearance thunar dunst volumeicon network-manager-applet arandr blueman pavucontrol xbacklight ImageMagick flameshot -y
+sudo dnf install zsh i3status i3lock rofi alacritty picom nitrogen polkit-gnome lxappearance thunar dunst volumeicon network-manager-applet arandr blueman pavucontrol xbacklight ImageMagick flameshot neofetch -y
 
 # install papirus icons
 sudo dnf install papirus-icon-theme -y
