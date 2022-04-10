@@ -10,25 +10,25 @@ sudo dnf install zsh i3status i3lock rofi alacritty picom nitrogen polkit-gnome 
 
 # move config files around
 rm -rf ~/.config/alacritty
-mv ~/cavfiles/alacritty ~/.config/
+mv -i ~/cavfiles/alacritty ~/.config/
 
 rm -rf ~/.config/dunst
-mv ~/cavfiles/dunst ~/.config/
+mv -i ~/cavfiles/dunst ~/.config/
 
 rm -rf ~/.config/i3
-mv ~/cavfiles/i3 ~/.config/
+mv -i ~/cavfiles/i3 ~/.config/
 
 rm -rf ~/.config/i3status
-mv ~/cavfiles/i3status ~/.config/
+mv -i ~/cavfiles/i3status ~/.config/
 
 rm -rf ~/.config/nitrogen
-mv ~/cavfiles/nitrogen ~/.config/
+mv -i ~/cavfiles/nitrogen ~/.config/
 
 rm -rf ~/.config/rofi
-mv ~/cavfiles/rofi ~/.config/
+mv -i ~/cavfiles/rofi ~/.config/
 
 rm -rf ~/.config/volumeicon
-mv ~/cavfiles/volumeicon ~/.config/
+mv -i ~/cavfiles/volumeicon ~/.config/
 
 # themes, icons and fonts
 mkdir ~/.themes 
@@ -42,6 +42,7 @@ mv -i ~/cavfiles/themes/* ~/.themes
 sudo dnf install papirus-icon-theme -y
 
 # move wallpapers
+mkdir ~/Pictures
 mv -i ~/cavfiles/wallpapers/* ~/Pictures/
 
 echo "i3cav finish installing!"
