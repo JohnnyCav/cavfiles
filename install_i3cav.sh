@@ -28,6 +28,9 @@ mv fonts ~/.local/share/
 mv -R icons/* ~/.icons
 mv -R themes/* ~/.themes
 
+# install papirus icons
+sudo dnf install papirus-icon-theme -y
+
 # move wallpapers
 mv -R wallpapers/* ~/Pictures/
 
