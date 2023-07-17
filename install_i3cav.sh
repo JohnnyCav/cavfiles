@@ -12,7 +12,7 @@ sudo apt install nala -y
 sudo nala install i3 i3status i3lock i3blocks -y
 
 # install other dependencies
-sudo nala install zsh rofi kitty picom nitrogen lxpolkit lxappearance nautilus dunst volumeicon-alsa budgie-network-manager-applet arandr blueman pavucontrol xbacklight imagemagick -y
+sudo nala install xorg lightdm zsh rofi kitty picom nitrogen lxpolkit lxappearance nautilus dunst volumeicon-alsa budgie-network-manager-applet arandr blueman pavucontrol xbacklight imagemagick -y
 
 # install other dependencies
 sudo nala install flameshot neofetch filezilla putty docker docker-compose meld exa vim bpytop htop -y
@@ -47,6 +47,8 @@ cp -r ~/cavfiles/rofi ~/.config/
 
 # themes, icons and fonts
 mkdir ~/.themes
+mkdir ~/.local
+mkdir ~/.local/share
 cp -r ~/cavfiles/fonts ~/.local/share/
 cp -r ~/cavfiles/icons ~/.local/share/
 cp -r ~/cavfiles/themes/* ~/.themes/
