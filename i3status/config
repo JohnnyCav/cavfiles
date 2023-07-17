@@ -1,0 +1,78 @@
+#####################################################################################################################
+#################                          JOHNNY CAV i3status CONFIG                               #################
+#####################################################################################################################
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+general {
+        output_format = "i3bar"
+        colors = true
+        interval = 1
+        color_good = "#81a1c1" # Light green
+        color_degraded = "#fafe7c" # Light yellow
+        color_bad = "#ff7770" # Light red
+}
+
+order += "disk /"
+order += "cpu_usage"
+order += "cpu_temperature 0"
+order += "memory"
+order += "wireless _first_"
+order += "ethernet _first_"
+order += "volume master"
+order += "battery 0"
+order += "tztime local"
+
+disk "/" {
+        #format = "        %avail "
+	format = "  ﮼   %avail "
+}
+
+cpu_usage {
+        format = "   %usage "
+}
+
+cpu_temperature 0 {
+        format = "   %degrees °C "
+}
+
+memory {
+        format = "   %used "
+        threshold_degraded = "1G"
+        format_degraded = "MEMORY < %available"
+}
+
+wireless _first_ {
+        format_up = "   %essid "
+        format_down = "   "
+}
+
+ethernet _first_ {
+        format_up = "   "
+        format_down = "   "
+}
+
+volume master {
+        format = "   %volume "
+        format_muted = "   0% "
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+}
+
+battery 0 {
+        format = " %status %percentage "
+        low_threshold = 25
+        threshold_type = percentage
+        hide_seconds = true
+        integer_battery_capacity = true
+        last_full_capacity = true
+        status_chr = ""
+        status_bat = ""
+        status_full = ""
+}
+
+tztime local {
+        format = "   %a %d-%m-%Y  %H:%M "
+}
+
