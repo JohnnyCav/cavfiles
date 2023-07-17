@@ -17,9 +17,6 @@ sudo nala install xorg lightdm zsh rofi kitty picom nitrogen lxpolkit lxappearan
 # install other dependencies
 sudo nala install flameshot neofetch filezilla putty docker docker-compose meld exa vim bpytop htop -y
 
-# install nvidia driver
-sudo nala install nvidia-driver -y
-
 # copy config files around
 rm -rf ~/.config/bpytop
 cp -r ~/cavfiles/bpytop ~/.config/
