@@ -7,8 +7,10 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$PATH:$HOME/.local/bin
+export GRAALVM_HOME=$HOME/.sdkman/candidates/java/22.3.3.1.r17-mandrel
+export PATH=$GRAALVM_HOME/bin:$PATH:$HOME/.local/bin
 source $HOME/.profile
+ulimit -n 63536
 
 # load fm6000
 fm6000 -c random -f $HOME/darthvader.txt
@@ -102,6 +104,8 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
+export PATH="$PATH:/opt/nvim-linux64/bin"
+
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -117,8 +121,55 @@ source $ZSH/oh-my-zsh.sh
 alias ls="exa --icons"
 alias code="exec code"
 alias kse="sh ~/kse/kse.sh"
-alias vim="lvim"
-alias nvim="lvim"
+alias vim="nvim"
+alias vi="nvim"
+alias vpn-open="sh ~/vpn/vpn-open"
+alias vpn-close="sh ~/vpn/vpn-close"
+alias vpn-status="sh ~/vpn/vpn-status"
+alias k="kubectl"
+
+alias wine32='WINEARCH=win32 WINEPREFIX="$HOME/.win32" wine wineboot'
+alias wine64='WINEARCH=win64 WINEPREFIX="$HOME/.win64" wine wineboot'
+
+win32() {
+    wine32
+    export WINEARCH=win32
+    export WINEPREFIX="$HOME/.win32"
+}
+
+win64() {
+    wine64
+    export WINEARCH=win64
+    export WINEPREFIX="$HOME/.win64"
+}
+
+# kubectl auto-completion
+source <(kubectl completion zsh)
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+export MANPATH=$HOME/tools/ripgrep/doc/man:$MANPATH
+export FPATH=$HOME/tools/ripgrep/complete:$FPATH
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/jpcavaleiro/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/jpcavaleiro/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/jpcavaleiro/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/jpcavaleiro/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
