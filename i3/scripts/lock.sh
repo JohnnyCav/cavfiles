@@ -1,5 +1,5 @@
 #!/bin/bash
-icon="$HOME/Pictures/aUq9FWc.png"
+icon="$HOME/Pictures/goku-png-32664.png"
 # create a temp file
 img=$(mktemp /tmp/XXXXXXXXXX.png)
 # Take a screenshot of current desktop

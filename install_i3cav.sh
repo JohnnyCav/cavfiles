@@ -12,10 +12,10 @@ sudo apt install nala -y
 sudo nala install i3 i3status i3lock i3blocks -y
 
 # install other dependencies
-sudo nala install lightdm zsh rofi kitty picom nitrogen lxpolkit lxappearance nautilus dunst volumeicon-alsa network-manager-gnome arandr blueman pavucontrol xbacklight imagemagick -y
+sudo nala install zsh rofi kitty picom nitrogen lxpolkit lxappearance nautilus dunst volumeicon-alsa network-manager-gnome arandr blueman pavucontrol xbacklight imagemagick -y
 
 # install other dependencies
-sudo nala install flameshot neofetch filezilla putty docker docker-compose meld exa vim bpytop htop -y
+sudo nala install flameshot neofetch filezilla putty docker docker-compose meld exa nvim bpytop htop -y
 
 # copy config files around
 rm -rf ~/.config/bpytop
@@ -41,6 +41,9 @@ cp -r ~/cavfiles/nautilus ~/.config/
 
 rm -rf ~/.config/nitrogen
 cp -r ~/cavfiles/nitrogen ~/.config/
+
+rm -rf ~/.config/nvim
+cp -r ~/cavfiles/nvim ~/.config/
 
 rm -rf ~/.config/rofi
 cp -r ~/cavfiles/rofi ~/.config/
