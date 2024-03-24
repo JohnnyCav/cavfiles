@@ -15,7 +15,7 @@ sudo nala install i3 i3status i3lock i3blocks -y
 sudo nala install zsh rofi kitty picom nitrogen lxpolkit lxappearance nautilus dunst volumeicon-alsa network-manager-gnome arandr blueman pavucontrol xbacklight imagemagick -y
 
 # install other dependencies
-sudo nala install flameshot neofetch filezilla putty docker docker-compose meld exa nvim bpytop htop -y
+sudo nala install flameshot neofetch filezilla putty docker docker-compose meld exa bpytop htop -y
 
 # copy config files around
 rm -rf ~/.config/bpytop
